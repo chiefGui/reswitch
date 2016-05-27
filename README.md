@@ -20,15 +20,17 @@ import {
   USERS_GET__FAILURE
 } from 'reducers/users'
 
+const defaultState = {areLoading: false, hasError: false, users: null}
+
 function users(state = {
   areLoading: false,
   hasError:   false,
   users:      null
 }, action) {
   return reswitch(
-    USERS_GET,          {areLoading: true,  hasError: false, users: null},
-    USERS_GET__SUCCESS, {areLoading: false, hasError: false, users: action.users},
-    USERS_GET__FAILURE, {areLoading: false, hasError: true,  users: null},
+    USERS_GET,          {...defaultState, areLoading: true},
+    USERS_GET__SUCCESS, {...defaultState, users: action.users},
+    USERS_GET__FAILURE, {...defaultState, hasError: true},
   )(state, action.type)
 }
 
@@ -39,8 +41,8 @@ export default users
 
 ```js
 return reswitch(
-  USERS_GET,          {areLoading: true,  hasError: false, users: null},
-  USERS_GET__SUCCESS, {areLoading: false, hasError: false, users: action.users},
+  USERS_GET,          {...defaultState, areLoading: true},
+  USERS_GET__SUCCESS, {...defaultState, users: action.users},
   USERS_GET__FAILURE, () => ({...state, action.error})
 )(state, action.type)
 ```
@@ -52,11 +54,11 @@ the last one as the new default:
 
 ```js
 return reswitch(
-  USERS_GET,          {areLoading: true,  hasError: false, users: null},
-  USERS_GET__SUCCESS, {areLoading: false, hasError: false, users: action.users},
+  USERS_GET,          {...defaultState, areLoading: true},
+  USERS_GET__SUCCESS, {...defaultState, users: action.users},
   USERS_GET__FAILURE, () => ({...state, action.error}),
 
-  () => ({areLoading: false, hasError: false, users: null, areAdmin: false})
+  () => ({...defaultState, areAdmin: false})
 )(state, action.type)
 ```
 
