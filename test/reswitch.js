@@ -85,5 +85,4 @@ describe('reswitch', () => {
       })
     })
   })
-
 })

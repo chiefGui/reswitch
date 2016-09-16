@@ -27,7 +27,6 @@ export default function reswitch(...args: Array<?string | Reducer | Object>): Re
 
     if (hasFunctionNature(args[argIndex])) {
       return args[argIndex](state, action)
-
     }
 
     return args[argIndex]
