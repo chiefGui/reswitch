@@ -6,7 +6,11 @@
   "scripts": {
     "test": "mocha --compilers js:babel-core/register"
   },
-  "author": "Guilherme Oderdenge & Andrey Knupp",
+  "engines": {
+    "node": "4.x",
+    "npm": "3.10.x"
+  },
+  "author": "Guilherme Oderdenge",
   "license": "MIT",
   "repository": "https://github.com/chiefGui/reswitch",
   "devDependencies": {
