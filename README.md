@@ -1,6 +1,6 @@
-# reswitch v0.1.0
+# reswitch [![Build Status](https://travis-ci.org/chiefGui/reswitch.svg?branch=master)](https://travis-ci.org/chiefGui/reswitch)
 
-Write your reducers with less boilerplate!
+Write your reducers with less boilerplate! 🚀
 
 ### Install
 
@@ -64,6 +64,10 @@ return reswitch(
 
 _In the above's example we're defining the last argument as a function, but it doesn't
 need to be. You can use a plain object—or even a complex one!—if you need._
+
+### TODO
+
+- [ ] Enable acceptance of instances in the second parameter (good when working with Immutable!)
 
 ### Motivation
 
