@@ -65,16 +65,22 @@ return reswitch(
 _In the above's example we're defining the last argument as a function, but it doesn't
 need to be. You can use a plain object—or even a complex one!—if you need._
 
+To see reswitch in modus operandi, [you can take a look in our tests](https://github.com/chiefGui/reswitch/blob/master/test/reswitch.js).
+
+### Tests
+
+`npm run test`
+
 ### TODO
 
-- [ ] Enable acceptance of instances in the second parameter (good when working with Immutable!)
+- [ ] Enable acceptance of instances in the state recording (good when working with Immutable!)
 
 ### Motivation
 
 I don't like those huge amounts of `switch`es. Although in the official Redux's website
 [they're saying that switches aren't the real boilerplate](http://redux.js.org/docs/recipes/ReducingBoilerplate.html#reducers),
 I still don't like to use it. **It looks like a boilerplate** and for me that's
-reason enough;
+reason enough.
 
 ### License
 
