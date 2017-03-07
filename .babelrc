@@ -1,6 +1,13 @@
 {
+  "env": {
+    "test": {
+      "presets": "latest"
+    }
+  },
+
   "presets": [
-    ["es2015", {"modules": false}]
+    ["latest", {"modules": false}]
   ],
+
   "plugins": ["transform-flow-strip-types"]
 }
