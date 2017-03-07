@@ -4,7 +4,7 @@ module.exports = {
   entry: path.resolve(__dirname, 'src', 'reswitch'),
 
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'reswitch.js',
     library: 'reswitch',
     libraryTarget: 'umd'
@@ -14,7 +14,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         exclude: /.\/node_modules/
       }
     ]

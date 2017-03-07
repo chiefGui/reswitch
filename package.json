@@ -1,7 +1,7 @@
 {
   "name": "reswitch",
-  "version": "0.1.3",
-  "description": "A tiny library to make switches with state",
+  "version": "1.0.0",
+  "description": "A tiny library to write declarative, clear reducers",
   "main": "./build/reswitch.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register"
@@ -14,12 +14,17 @@
   "license": "MIT",
   "repository": "https://github.com/chiefGui/reswitch",
   "devDependencies": {
-    "babel-core": "6.14.0",
-    "babel-loader": "6.2.5",
-    "babel-plugin-transform-flow-strip-types": "6.14.0",
-    "babel-preset-es2015": "6.14.0",
-    "expect.js": "0.3.1",
-    "mocha": "3.0.2",
-    "webpack": "1.13.2"
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.4.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-es2015": "^6.22.0",
+    "eslint": "^3.17.1",
+    "eslint-config-standard": "^7.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1",
+    "expect.js": "^0.3.1",
+    "mocha": "^3.2.0",
+    "webpack": "^2.2.1"
   }
 }
