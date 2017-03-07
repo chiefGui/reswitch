@@ -78,15 +78,11 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = reswitch;
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (immutable) */ __webpack_exports__["default"] = reswitch;
 var hasFunctionNature = function hasFunctionNature(maybe) {
   return typeof maybe === 'function';
 };
