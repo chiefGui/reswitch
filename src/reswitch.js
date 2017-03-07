@@ -1,7 +1,7 @@
 /* @flow */
 
 const hasFunctionNature = (maybe: any) => typeof maybe === 'function'
-const hasStringNature   = (maybe: any) => typeof maybe === 'string'
+const hasStringNature = (maybe: any) => typeof maybe === 'string'
 
 type Reducer = (state: any, action: Object) => any
 
