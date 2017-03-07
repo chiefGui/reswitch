@@ -5,7 +5,7 @@ const hasStringNature = (maybe: any) => typeof maybe === 'string'
 
 type Reducer = (state: any, action: Object) => any
 
-export default function reswitch(...args: Array<?string | Reducer | Object>): Reducer {
+export default function reswitch (...args: Array<string | Function | Reducer | Object>): Reducer {
   const defaultReducer = (state: any) => state
 
   const hasDefaultReducer = (
