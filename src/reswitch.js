@@ -1,11 +1,11 @@
 /* @flow */
 
 const hasFunctionNature = (maybe: any) => typeof maybe === 'function'
-const hasStringNature   = (maybe: any) => typeof maybe === 'string'
+const hasStringNature = (maybe: any) => typeof maybe === 'string'
 
 type Reducer = (state: any, action: Object) => any
 
-export default function reswitch(...args: Array<?string | Reducer | Object>): Reducer {
+export default function reswitch (...args: Array<string | Function | Reducer | Object>): Reducer {
   const defaultReducer = (state: any) => state
 
   const hasDefaultReducer = (
@@ -22,7 +22,7 @@ export default function reswitch(...args: Array<?string | Reducer | Object>): Re
     args.push(defaultReducer)
   }
 
-  return (state, action: Object) => {
+  return (state: any, action: Object) => {
     const argIndex = args.findIndex(arg => arg === action) + 1 || args.length - 1
 
     if (hasFunctionNature(args[argIndex])) {
