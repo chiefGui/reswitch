@@ -1,8 +1,8 @@
 {
   "name": "reswitch",
   "version": "1.0.0",
-  "description": "A tiny library to write declarative, clear reducers",
   "main": "./dist/reswitch.js",
+  "description": "A tiny library to write friendly reducers with less boilerplate.",
   "scripts": {
     "test": "NODE_ENV=test jest",
     "build": "NODE_ENV=production webpack"
