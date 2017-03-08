@@ -22,7 +22,7 @@ export default function reswitch (...args: Array<string | Function | Reducer | O
     args.push(defaultReducer)
   }
 
-  return (state, action: Object) => {
+  return (state: any, action: Object) => {
     const argIndex = args.findIndex(arg => arg === action) + 1 || args.length - 1
 
     if (hasFunctionNature(args[argIndex])) {
