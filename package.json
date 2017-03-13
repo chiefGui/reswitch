@@ -7,10 +7,6 @@
     "test": "NODE_ENV=test jest",
     "build": "NODE_ENV=production webpack"
   },
-  "engines": {
-    "node": ">=6.x <=7.x",
-    "npm": ">=3.10.x <=4.x"
-  },
   "author": "Guilherme Oderdenge",
   "license": "MIT",
   "repository": "https://github.com/chiefGui/reswitch",
